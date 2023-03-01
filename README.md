@@ -1,0 +1,2 @@
+![Screenshot Web](https://github.com/ajansen95/Grundlagen-Web/blob/master/assets/readme/screenshot_web.PNG)
+![Screenshot Mobile](https://github.com/ajansen95/Grundlagen-Web/blob/master/assets/readme/screenshot_mobile.PNG)
