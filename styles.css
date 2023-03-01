@@ -23,6 +23,13 @@ nav #main{
     justify-content: space-between;
     align-items: center;
 }
+.menu_item{
+    flex: 1;
+}
+nav #main #nav_right{
+    display: flex;
+    justify-content: end;
+}
 nav a{
     text-decoration: none;
 }

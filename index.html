@@ -11,15 +11,17 @@
 
     <nav class="topnav">
         <div id="main">
-            <a href="javascript:void(0);" class="icon" id="burger_icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon menu_item" id="burger_icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-            <nav id="nav_browser">
+            <nav class="menu_item" id="nav_browser">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
             </nav>
             <a href="index.html" class="active"><img id="logo" src="assets/img/reanmo_logo.svg" alt="reanmo_logo"></a>
-            <a href="about.html"><button>Kontakt</button></a>
+            <div class="menu_item" id="nav_right">
+                <a href="about.html" id="contact_button"><button>Kontakt</button></a>
+            </div>
         </div>
         <nav id="nav_mobile">
             <a href="index.html">Home</a>
