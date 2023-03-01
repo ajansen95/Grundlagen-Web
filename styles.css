@@ -1,0 +1,82 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: white;
+}
+a{
+    color: white;
+}
+body{
+    background-color: #001427;
+}
+#logo{
+    width: 192px;
+}
+nav #main{
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+}
+nav #burger_icon:hover{
+    opacity: 0.5;
+}
+nav #nav_browser{
+    display: none;
+}
+@media only screen and (min-width: 600px) {
+    nav #nav_browser {
+        display: flex;
+    }
+    nav #burger_icon{
+        display: none;
+    }
+}
+nav #nav_browser a{
+    padding: 4px;
+}
+nav #nav_mobile{
+    border: 1px solid white;
+    border-radius: 0 0 4px 0;
+    display: none;
+    flex-direction: column;
+    width: 192px;
+    height: 384px;
+}
+nav #nav_mobile a{
+    padding: 4px;
+}
+nav #nav_mobile a:hover{
+    opacity: 0.5;
+}
+button{
+    margin: 4px;
+    background-color: #00acdf;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+}
+button:hover{
+    opacity: 0.5;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media only screen and (min-width: 600px) {
+    main{
+        flex-direction: row;
+    }
+}
