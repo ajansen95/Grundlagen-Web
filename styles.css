@@ -17,7 +17,7 @@ body{
     width: 192px;
 }
 nav #main{
-    padding: 4px;
+    padding: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -41,7 +41,7 @@ nav #nav_browser{
     }
 }
 nav #nav_browser a{
-    padding: 4px;
+    padding: 16px;
 }
 nav #nav_mobile{
     border: 1px solid white;
@@ -74,9 +74,38 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+}
+main #banner{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    align-items: center;
+}
+main #banner #heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 720px;
+}
+main #banner #heading h1{
+    font-size: 64px;
+    margin: 16px;
+}
+main #banner #heading h3{
+    font-size: 23px;
+    font-weight: lighter;
+    margin: 16px;
+}
+main #banner #images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 @media only screen and (min-width: 600px) {
-    main{
+    main #banner #images{
         flex-direction: row;
     }
 }
+
