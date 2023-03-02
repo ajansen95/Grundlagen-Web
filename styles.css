@@ -47,6 +47,9 @@ nav #main #nav_right{
     display: flex;
     justify-content: end;
 }
+main #banner #social{
+    display: none;
+}
 @media only screen and (min-width: 1200px) {
     nav #main #nav_browser {
         display: flex;
@@ -55,6 +58,7 @@ nav #main #nav_right{
         display: none;
     }
 }
+
 nav a{
     padding: 16px;
     color: white;
@@ -89,10 +93,11 @@ nav #nav_mobile a:hover{
 }
 button{
     margin: 4px;
+    height: 40px;
     background-color: #00acdf;
     border: none;
     border-radius: 4px;
-    padding: 8px;
+    padding: 0 18px 0 18px;
 }
 button:hover{
     opacity: 0.5;
@@ -133,6 +138,7 @@ main #banner #heading h3{
 }
 main #banner #images{
     display: flex;
+    margin-top: 30px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -158,8 +164,8 @@ main #banner .line_box{
         z-index: -1;
         height: 1000px;
         width: 100%;
-        border: 1px solid #1CACDF;
-        opacity: 0.5;
+        border: 3px solid #1CACDF;
+        opacity: 0.1;
     }
     main #banner #line1{
         top: 0;
@@ -177,13 +183,30 @@ main #banner .line_box{
     main #banner #heading h1{
         margin-top: 150px;
     }
+    main #banner #social{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        top: 460px;
+        left: 3%;
+    }
+    main #banner #social a{
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        width: 18px;
+    }
+    main #banner #social a:nth-child(4){
+        width: 16px;
+    }
 }
 
 
 #white_section_banner{
     position: relative;
     z-index: -1;
-    margin-top: -300px;
+    margin-top: -350px;
     height: 400px;
     width: 100%;
     display: flex;
@@ -191,11 +214,36 @@ main #banner .line_box{
 }
 
 #big_white_section{
+    position: relative;
     width: 100%;
-    height: 300px;
-    background-color: aquamarine;
+    height: 1200px;
+    background-color: white;
+    overflow: hidden;
+}
+#big_white_section #our_service{
+    margin-top: 100px;
+}
+#big_white_section #our_service h1{
+    font-size: 80px;
+    font-weight: 500;
+    color: black;
+}
+#ellipse1{
+    position: absolute;
+    left: -170px;
+}
+#ellipse2{
+    position: absolute;
+    top: 800px;
+    right: -170px;
+    color: #00acdf;
 }
 
+section #mobile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 footer{
