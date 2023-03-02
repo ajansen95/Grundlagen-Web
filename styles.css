@@ -179,5 +179,12 @@ main #banner .line_box{
 
 }
 
-
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    background-color: #001427;
+}
 
