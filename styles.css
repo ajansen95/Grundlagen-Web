@@ -216,14 +216,15 @@ main #banner .line_box{
 #big_white_section{
     position: relative;
     width: 100%;
-    height: 1200px;
+    height: 1400px;
     background-color: white;
     overflow: hidden;
 }
 #big_white_section #our_service{
     margin-top: 100px;
+    margin-bottom: 100px;
 }
-#big_white_section #our_service h1{
+#big_white_section h1{
     font-size: 80px;
     font-weight: 500;
     color: black;
@@ -243,6 +244,35 @@ section #mobile{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+section #faq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+section #faq #faq_container{
+    max-width: 600px;
+    width: 60%;
+    height: 720px;
+}
+section #faq_container .card{
+    background-color: #D1D1D6;
+    padding: 24px;
+    margin: 16px;
+    border-radius: 4px;
+}
+section #faq_container .card p{
+    text-align: left;
+}
+section #faq_container .card p.question{
+    color: black;
+}
+section #faq_container .card p.answer{
+    margin-top: 10px;
+    color: black;
+    opacity: 0.5;
 }
 
 
