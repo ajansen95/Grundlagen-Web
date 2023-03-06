@@ -17,8 +17,6 @@ body{
     width: 192px;
 }
 nav #main{
-    margin-top: 16px;
-    padding: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -38,6 +36,7 @@ nav #burger_icon:hover{
     opacity: 0.5;
 }
 nav .menu_spacer{
+    display: none;
     flex: 0.2;
 }
 nav #main #nav_browser{
@@ -57,6 +56,15 @@ main #banner #social{
     nav #burger_icon{
         display: none;
     }
+    nav .menu_spacer{
+        display: block;
+    }
+    nav #main #nav_left{
+        display: none;
+    }
+    nav #main{
+        padding: 16px;
+    }
 }
 
 nav a{
@@ -75,22 +83,34 @@ nav a.current{
 nav #nav_mobile{
     position: absolute;
     z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
     background-color: #001427;
-    opacity: 0.8;
-    border: 1px solid white;
-    border-radius: 0 0 4px 0;
+    opacity: 0.9;
+    /*border: 1px solid white;*/
+    border-radius: 0 0 8px 0;
     display: none;
     flex-direction: column;
-    width: 192px;
-    height: 384px;
 }
 nav #nav_mobile a{
-    padding: 4px;
     font-size: x-large;
+    padding: 4px 4px 4px 12px;
 }
 nav #nav_mobile a:hover{
     opacity: 0.5;
 }
+nav #nav_mobile a#burger_icon_opened{
+    font-size: medium;
+    margin-top: 15px;
+    padding: 15px 16px 16px 15px;
+}
+nav #nav_mobile a i{
+    width: 38px;
+}
+
+
 button{
     margin: 4px;
     height: 40px;
@@ -222,7 +242,7 @@ main #banner .line_box{
 }
 #big_white_section #our_service{
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 300px;
 }
 #big_white_section h1{
     font-size: 80px;
@@ -245,35 +265,54 @@ section #mobile{
     align-items: center;
     justify-content: center;
 }
+section #mobile #app_store{
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+
 
 section #faq{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
-section #faq #faq_container{
-    max-width: 600px;
-    width: 60%;
-    height: 720px;
-}
-section #faq_container .card{
-    background-color: #D1D1D6;
-    padding: 24px;
-    margin: 16px;
+section #faq details{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background-color: #F2F2F7;
     border-radius: 4px;
-}
-section #faq_container .card p{
     text-align: left;
+    padding: 38px;
+    margin: 10px;
+    font-size: 20px;
 }
-section #faq_container .card p.question{
+section #faq details[open] {
+    background-color: white;
+    box-shadow: 0 3px 6px #00000029;
+}
+section #faq details p{
+    color: #7A7A7F;
+    margin-top: 16px;
+    padding-left: 22px;
+}
+section #faq details summary{
     color: black;
 }
-section #faq_container .card p.answer{
-    margin-top: 10px;
-    color: black;
-    opacity: 0.5;
+section #faq details > summary {
+    list-style-type: none;
+    display: flex;
 }
+section #faq details summary::before {
+    padding-right: 16px;
+    content:"+";
+}
+section #faq details[open] summary::before {
+    content:"-";
+}
+
 
 
 footer{
@@ -284,4 +323,109 @@ footer{
     width: 100%;
     background-color: #001427;
 }
+
+
+
+
+/*about page*/
+
+
+main#main_about #big_white_section{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.grid_container#photos{
+    width: 70%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 10px;
+}
+@keyframes blurIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#photos .grid-item{
+    opacity: 0;
+    font-size: 30px;
+    text-align: center;
+
+    animation-name: blurIn;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+#photos .grid-item img{
+    border-radius: 10px;
+}
+#photos .grid-item:nth-child(2){
+    animation-delay: 0.2s;
+}
+#photos .grid-item:nth-child(3){
+    animation-delay: 0.4s;
+}
+#photos .grid-item:nth-child(4){
+    animation-delay: 0.6s;
+}
+#photos .grid-item:nth-child(5){
+    animation-delay: 0.8s;
+}
+#photos .grid-item:nth-child(6){
+    animation-delay: 1s;
+}
+#photos .grid-item:nth-child(7){
+    animation-delay: 1.2s;
+}
+#photos .grid-item:nth-child(8){
+    animation-delay: 1.4s;
+}
+#photos .grid-item:nth-child(9){
+    animation-delay: 1.6s;
+}
+#photos .grid-item:nth-child(10){
+    animation-delay: 1.8s;
+}
+#photos .grid-item:nth-child(11){
+    animation-delay: 2s;
+}
+#photos .grid-item:nth-child(12){
+    animation-delay: 2.2s;
+}
+#photos .grid-item:nth-child(13){
+    animation-delay: 2.4s;
+}
+#photos .grid-item:nth-child(14){
+    animation-delay: 2.6s;
+}
+#photos .grid-item:nth-child(15){
+    animation-delay: 2.8s;
+}
+#photos .grid-item:nth-child(16){
+    animation-delay: 3s;
+}
+#photos .grid-item:nth-child(17){
+    animation-delay: 3.2s;
+}
+#photos .grid-item:nth-child(18){
+    animation-delay: 3.4s;
+}
+#photos .grid-item:nth-child(19){
+    animation-delay: 3.6s;
+}
+
+
+
+
+
+
 

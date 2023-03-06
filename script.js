@@ -7,3 +7,10 @@ function myFunction() {
         x.style.display = "flex";
     }
 }
+
+window.addEventListener('click', function(e){
+    if (!document.getElementById('nav_mobile').contains(e.target) && (!document.getElementById('burger_icon').contains(e.target))){
+        //alert("Clicked outside nav_mobile and burger_icon");
+        document.getElementById('nav_mobile').style.display="none";
+    }
+})
